@@ -7,13 +7,17 @@ import components from 'unplugin-vue-components/vite'
 export default defineConfig({
   plugins: [
     autoImport({
+      vueTemplate: true,
+      dts: 'resources/js/types/auto-imports.d.ts',
       imports: [
         'vue',
         {
           '@inertiajs/vue3': ['router', 'useForm', 'usePage', 'useRemember'],
         },
+        {
+          'momentum-trail': ['route', 'current'],
+        },
       ],
-      dts: 'resources/js/types/auto-imports.d.ts',
     }),
     components({
       dirs: [
