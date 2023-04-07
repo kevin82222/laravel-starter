@@ -3,6 +3,7 @@ import laravel from 'laravel-vite-plugin'
 import vue from '@vitejs/plugin-vue'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
+import { watch } from 'vite-plugin-watch'
 
 export default defineConfig({
   plugins: [
@@ -32,6 +33,10 @@ export default defineConfig({
             return { name, from: '@inertiajs/vue3' }
         },
       ],
+    }),
+    watch({
+      pattern: 'routes/*.php',
+      command: 'php artisan trail:generate',
     }),
     laravel({
       input: 'resources/js/app.ts',
