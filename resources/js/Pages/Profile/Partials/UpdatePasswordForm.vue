@@ -1,11 +1,4 @@
 <script setup lang="ts">
-import { useForm } from '@inertiajs/vue3'
-import { ref } from 'vue'
-import InputError from '@/Components/InputError.vue'
-import InputLabel from '@/Components/InputLabel.vue'
-import PrimaryButton from '@/Components/PrimaryButton.vue'
-import TextInput from '@/Components/TextInput.vue'
-
 const passwordInput = ref<HTMLInputElement | null>(null)
 const currentPasswordInput = ref<HTMLInputElement | null>(null)
 

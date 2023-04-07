@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, watch } from 'vue'
-
 const props = withDefaults(
   defineProps<{
     show?: boolean

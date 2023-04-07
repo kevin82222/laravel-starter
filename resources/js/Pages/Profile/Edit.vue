@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { Head } from '@inertiajs/vue3'
 import DeleteUserForm from './Partials/DeleteUserForm.vue'
 import UpdatePasswordForm from './Partials/UpdatePasswordForm.vue'
 import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm.vue'
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
 
 defineProps<{
   mustVerifyEmail?: boolean
