@@ -1,19 +1,20 @@
 {
+  "extends": "@vue/tsconfig/tsconfig.web.json",
   "compilerOptions": {
+    "ignoreDeprecations": "5.0",
     "allowJs": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "jsx": "preserve",
-    "strict": true,
-    "isolatedModules": true,
-    "target": "ESNext",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "skipLibCheck": true,
+    "types": [
+      "vite/client"
+    ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./resources/js/*"]
+      "@/*": ["resources/js/*"]
     }
   },
-  "include": ["resources/js/**/*.ts", "resources/js/**/*.d.ts", "resources/js/**/*.vue"]
+  "include": [
+    "resources/js/**/*.ts",
+    "resources/js/**/*.d.ts",
+    "resources/js/**/*.vue"
+  ]
 }
