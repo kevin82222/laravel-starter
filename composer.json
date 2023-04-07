@@ -15,6 +15,8 @@
   },
   "require-dev": {
     "fakerphp/faker": "^1.9.1",
+    "laravel-lang/lang": "^12.20",
+    "laravel-lang/publisher": "^14.6",
     "laravel/breeze": "^1.20",
     "laravel/pint": "^1.0",
     "laravel/sail": "^1.18",
