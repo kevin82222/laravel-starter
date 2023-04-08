@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     autoImport({
       vueTemplate: true,
-      dts: 'resources/js/types/auto-imports.d.ts',
+      dts: 'resources/scripts/types/auto-imports.d.ts',
       imports: [
         'vue',
         {
@@ -21,11 +21,11 @@ export default defineConfig({
       ],
     }),
     components({
+      dts: 'resources/scripts/types/components.d.ts',
       dirs: [
-        'resources/js/Components',
-        'resources/js/Layouts',
+        'resources/views/components',
+        'resources/views/layouts',
       ],
-      dts: 'resources/js/types/components.d.ts',
       resolvers: [
         (name) => {
           const components = ['Head', 'Link']
@@ -39,7 +39,7 @@ export default defineConfig({
       command: 'php artisan trail:generate',
     }),
     laravel({
-      input: 'resources/js/app.ts',
+      input: 'resources/scripts/app.ts',
       refresh: true,
     }),
     vue({
