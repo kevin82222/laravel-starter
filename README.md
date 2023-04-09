@@ -1,66 +1,79 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Personal Laravel Development Environment
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository contains my personal default Laravel development environment, based on a `laravel new` installation and Laravel Breeze for setting up Inertia.js, Vue.js, TypeScript, and Tailwind CSS. Additionally, it includes some extra configurations and tools. 
+Please note: **This default Laravel development environment is based on my personal preferences and is not intended to be a universal setup**.
 
-## About Laravel
+## Main Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- [Laravel framework](https://laravel.com/) (version 10.x)
+- [Laravel Breeze](https://laravel.com/docs/breeze) (providing [Inertia.js](https://inertiajs.com/), [Vue.js](https://vuejs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/))
+- [Laravel Sail](https://laravel.com/docs/sail) (lightweight command-line interface for running Laravel in Docker containers, with [MariaDB](https://mariadb.org/) and [Redis](https://redis.io/))
+- [ESLint](https://eslint.org/) (JavaScript code linting and formatting) with [antfu/eslint-config](https://github.com/antfu/eslint-config) (Anthony's ESLint config presets for easy setup)
+- [Laravel IDE Helper](https://github.com/barryvdh/laravel-ide-helper) (assisting IDEs in understanding Laravel code structure)
+- [Lint-staged](https://github.com/okonet/lint-staged) (code linting before commits)
+- [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) (Git hooks to automatically run lint-staged before commits)
+- [Vite](https://vitejs.dev/) (next-generation frontend development and build tool)
+- Using [pnpm](https://pnpm.io/) instead of npm (faster and more efficient package manager)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## How to Use
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clone this repository to your local machine:
 
-## Learning Laravel
+```bash
+git clone https://github.com/kevin82222/kevin-laravel-starter.git
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. Navigate into the project directory:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+cd kevin-laravel-starter
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Set up a Bash alias for Laravel Sail (optional, but recommended). Add the following line to your `~/.bashrc`, `~/.bash_profile`, or `~/.zshrc` file:
 
-## Laravel Sponsors
+```bash
+alias sail='sh vendor/bin/sail'
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Save the file and restart your terminal. You can now use the `sail` command instead of `./vendor/bin/sail`. For more information, please refer to the [official Laravel Sail documentation](https://laravel.com/docs/sail#configuring-a-shell-alias).
 
-### Premium Partners
+4. Start Laravel Sail:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```bash
+sail up -d
+```
+
+5. Install dependencies:
+
+```bash
+sail composer install
+pnpm install # because Sail not yet supported pnpm
+```
+
+6. Copy the `.env.example` file and rename it to `.env`:
+
+```bash
+cp .env.example .env
+```
+
+7. Generate an application key:
+
+```bash
+sail artisan key:generate
+```
+
+8. Run the development environment with Laravel Sail:
+
+```bash
+pnpm dev # ...
+```
+
+Now you can start developing with this personal default Laravel development environment!
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+As this is a personal preference project, we might not accept contributions from others. However, feel free to fork this repository and modify it according to your needs.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This repository is released under the [MIT License](LICENSE).
