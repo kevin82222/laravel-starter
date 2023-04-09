@@ -1,5 +1,8 @@
 {
   "exclude": [
     "lang"
+  ],
+  "notName": [
+    "ide_helper*.php"
   ]
 }
