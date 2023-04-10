@@ -7,7 +7,7 @@ Please note: **This default Laravel development environment is based on my perso
 
 - [Laravel Framework](https://laravel.com/) (version 10.x)
 - [Laravel Breeze](https://laravel.com/docs/breeze) (providing [Inertia.js](https://inertiajs.com/), [Vue.js](https://vuejs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/))
-- [Momentum Trail](https://github.com/lepikhinb/moment-trail) (provides a front-end `route()` function similar to Laravel's)
+- [Momentum Trail](https://github.com/lepikhinb/momentum-trail) (provides a front-end `route()` function similar to Laravel's)
 - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) and [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) (simplify importing Vue.js components and other modules)
 - [Laravel Sail](https://laravel.com/docs/sail) (lightweight command-line interface for running Laravel in Docker containers, with [MariaDB](https://mariadb.org/) and [Redis](https://redis.io/))
 - [ESLint](https://eslint.org/) (JavaScript code linting and formatting) with [antfu/eslint-config](https://github.com/antfu/eslint-config) (Anthony's ESLint config presets for easy setup)
@@ -22,13 +22,13 @@ Please note: **This default Laravel development environment is based on my perso
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/kevin82222/kevin-laravel-starter.git
+git clone https://github.com/kevin82222/laravel-starter.git
 ```
 
 2. Navigate into the project directory:
 
 ```bash
-cd kevin-laravel-starter
+cd laravel-starter
 ```
 
 3. Set up a Bash alias for Laravel Sail (optional, but recommended). Add the following line to your `~/.bashrc`, `~/.bash_profile`, or `~/.zshrc` file:
