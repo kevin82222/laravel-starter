@@ -5,8 +5,10 @@ Please note: **This default Laravel development environment is based on my perso
 
 ## Main Features
 
-- [Laravel framework](https://laravel.com/) (version 10.x)
+- [Laravel Framework](https://laravel.com/) (version 10.x)
 - [Laravel Breeze](https://laravel.com/docs/breeze) (providing [Inertia.js](https://inertiajs.com/), [Vue.js](https://vuejs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/))
+- [Momentum Trail](https://github.com/lepikhinb/moment-trail) (provides a front-end `route()` function similar to Laravel's)
+- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) and [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) (simplify importing Vue.js components and other modules)
 - [Laravel Sail](https://laravel.com/docs/sail) (lightweight command-line interface for running Laravel in Docker containers, with [MariaDB](https://mariadb.org/) and [Redis](https://redis.io/))
 - [ESLint](https://eslint.org/) (JavaScript code linting and formatting) with [antfu/eslint-config](https://github.com/antfu/eslint-config) (Anthony's ESLint config presets for easy setup)
 - [Laravel IDE Helper](https://github.com/barryvdh/laravel-ide-helper) (assisting IDEs in understanding Laravel code structure)
